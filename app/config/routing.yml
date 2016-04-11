@@ -1,0 +1,18 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+homepage:
+    path:      /
+    defaults:  { _controller: AppBundle:Default:index }
+addproject:
+    path:      /projects/add
+    defaults:  { _controller: AppBundle:Projects:add }
+editproject:
+    path:      /projects/edit/{projectId}
+    defaults:  { _controller: AppBundle:Projects:edit, projectId:null }
+listproject:
+    path:      /projects/list/{page}
+    defaults:  { _controller: AppBundle:Projects:list,page:1}
+deleteproject:
+    path:      /projects/delete/{id}
+    defaults:  { _controller: AppBundle:Projects:delete,id:null}
